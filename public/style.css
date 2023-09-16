@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Roboto+Condensed&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow Condensed','Roboto Condensed', sans-serif,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+html{
+    font-size: 62.5%;
+}
+body,
+html {
+    width: 100%;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.mainDiv {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #151a1e;
+    position: relative;
+}
+
+nav {
+    width: 100%;
+    /* height: 8rem; */
+    padding: 3rem 4rem .4rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav>img {
+    height: 5rem;
+}
+
+nav .nav-part2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+
+.nav-part2 :is(select, button) {
+    /* overflow: visible; */
+    display: inline-block;
+    min-width: 9rem;
+    padding: .8rem 2rem;
+    color: #fff;
+    background-color: #2e3241;
+    border-radius: 1rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    outline: none;
+
+}
+
+.nav-part3 {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    gap: 2rem;
+}
+
+.CircularProgressbar {
+    width: 4rem; 
+    height: 4rem; 
+    display: block;
+    margin: 0 auto;
+  }
+
+  .CircularProgressbar-path {
+    stroke: #3dc6c1; 
+    transition: stroke-dashoffset 0.5s;
+  }
+
+  .CircularProgressbar-text {
+    fill: #3dc6c1; 
+    font-size: 4rem; 
+    font-weight: bold;
+    text-anchor: middle;
+    dominant-baseline: middle;
+  }
+
+
+.nav-part3 a{
+    padding: .6rem 2.0rem;
+    border-radius: 1.0rem;
+    background-color: #3dc6c1;
+
+    font-size: 1.6rem;
+    font-weight: 500;
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+}
+.nav-part3 a i{
+    font-size: 2.5rem;
+    
+}
+
+
+
+.toggle-input {
+    display: none;
+}
+
+.toggle-label {
+    display: inline-block;
+    width: 7rem;
+    height: 3.5rem;
+    background-color: #fff;
+    border-radius: 2.875rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.toggle-input:checked+.toggle-label {
+    background-color: #2e3241;
+}
+
+.toggle-label::before {
+    content: "";
+    width: 3.15rem;
+    height: 3.15rem;
+    background-color: #3dc6c1;
+    position: absolute;
+    top: 0.175rem;
+    left: 0.175rem;
+    /* margin-top: auto; */
+    border-radius: 50%;
+    transition: 0.2s;
+}
+
+.toggle-input:checked+.toggle-label::before {
+    background-color: #3dc6c1;
+    left: calc(100% - 3.5rem);
+}
+
+
+
+/* center div styling */
+.mainData{
+    color: #fff;
+}
+.mid-data{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    padding: 1rem 0 3rem 0;
+}
+.mid-data>h1{
+    font-size: 3.2rem;
+    color: #6c757d;
+}
+.mid-data-data{
+    display: flex;
+    gap: 10rem;
+}
+.data{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+}
+.percentage{
+    font-size: 6rem;
+    color:#3dc6c1;
+    font-weight: bold;
+}
+.timeline{
+    font-size: 3rem;
+    color: #6c757d;
+    font-weight: 400;
+}
+
+.mid-data-extra{
+    font-size: 2rem;
+    color: #6c757d;
+    font-weight: 600;
+}
+.hero-price{
+    font-size: 9rem;
+}
+
+table{
+    font-size: 2.6rem ;
+    padding: 0 4.5rem ;
+    font-weight: bold;
+    width: 100%;
+    max-width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 1em;
+    margin: 0;
+    letter-spacing: 0.2rem;
+    border-spacing: 0 1rem;
+    overflow: scroll;
+
+}
+
+thead{
+    color: #6c757d;
+    font-size: 2.8rem ;
+    display: table-header-group;
+    vertical-align: middle;
+    height: 2rem;
+    border-color: inherit;
+}
+
+table tbody{
+
+    color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+
+    display: table-row-group;
+    vertical-align: middle;
+}
+
+td{
+    padding: 1.7rem 1.2rem;
+    background-color: transparent;
+    background-color: #333f48bf;
+}
+
+td,th{
+    /* border: 3px solid red; */
+    text-align: center;
+}
+tbody tr td:nth-child(1){
+    border-radius: 10px 0 0 10px;
+}
+tbody tr td:last-child{
+    border-radius: 0 10px 10px 0;
+
+}
+.end{
+    padding-bottom: 7rem;
+    border:none;
+    border-top:2px solid #fff;
+}
+
+footer{
+    position: absolute;
+    bottom: 1%;
+    left: 0;
+    height: 4rem;
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+footer button{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 0.75rem ;
+    font-size: 1.7rem;
+    border: 1.5px solid #3dc6c1;
+    background-color: transparent;
+    border-radius: 5px;
+    color: #3dc6c1;
+    box-shadow: 0 0  8px 2px #3dc6c1;
+}
+footer button:hover{
+    background-color: #3dc6c1;
+    color: #ffffff;
+    box-shadow: 0 0  5px 2px #3dc6c1;
+}
+
+@media screen and (max-width:978px){
+    html{
+        font-size: 30%;
+    }
+
+    .nav-part3{
+        display: none;
+    }
+    .mid-data-data{
+        gap:3rem;
+    }
+    .percentage{
+        font-size: 4rem;
+        color:#3dc6c1;
+        font-weight: bold;
+    }
+    .timeline{
+        font-size: 2.5rem;
+    }
+    .hero-price{
+        font-size: 6.5rem;
+    }
+}

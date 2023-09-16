@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hodlinfo</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.0/css/all.min.css'
+        integrity='sha512-3PN6gfRNZEX4YFyz+sIyTF6pGlQiryJu9NlGhu9LrLMQ7eDjNgudQoFDK3WSNAayeIKc6B8WXXpo4a7HqxjKwg=='
+        crossorigin='anonymous' referrerpolicy='no-referrer' />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="mainDiv">
+        <nav>
+            <img src="https://hodlinfo.com/static/media/HODLINFO.8f78fc06.png" alt="" class="logo">
+            <div class="nav-part2">
+                <select name="from" id="from_curr">
+                    <option value="INR" selected>INR</option>
+                </select>
+                <select name="to" id="to_curr">
+                    <option value="BTC" selected>BTC</option>
+                    <option value="ETH">ETH</option>
+                    <option value="TRX">TRX</option>
+                    <option value="XRP">XRP</option>
+                    <option value="ZEC">ZEC</option>
+                </select>
+                <button>BUY BTC</button>
+            </div>
+            <div class="nav-part3">
+
+                <svg class="CircularProgressbar" viewBox="0 0 100 100" data-test-id="CircularProgressbar">
+                    <path class="CircularProgressbar-trail" d="
+    M 50,50
+    m 0,-46
+    a 46,46 0 1 1 0,92
+    a 46,46 0 1 1 0,-92
+  " stroke-width="8" fill-opacity="0" style="stroke-dasharray: 289.027px, 289.027px; stroke-dashoffset: 0px;"></path>
+                    <path class="CircularProgressbar-path" d="
+    M 50,50
+    m 0,-46
+    a 46,46 0 1 1 0,92
+    a 46,46 0 1 1 0,-92
+  " stroke-width="8" fill-opacity="0" style="stroke-dasharray: 289.027px, 289.027px; stroke-dashoffset: 289.027px;">
+                    </path>
+                    <text class="CircularProgressbar-text" x="50" y="50">0</text>
+                </svg>
+
+                <a href="#"><i class="fab fa-telegram"></i>Connect Telegram</a>
+
+                <div class="toggle">
+                    <input type="checkbox" id="theme" class="toggle-input" checked>
+                    <label for="theme" class="toggle-label"></label>
+                </div>
+            </div>
+        </nav>
+        <div class="mainData">
+            <div class="mid-data">
+                <h1 class="head">Best Price to Trade</h1>
+                <div class="mid-data-data">
+                    <div class="data1 data">
+                        <div class="percentage">0.1 %</div>
+                        <div class="timeline">5 HRS</div>
+                    </div>
+                    <div class="data2 data">
+                        <div class="percentage">0.96 %</div>
+                        <div class="timeline">1 HOUR</div>
+                    </div>
+
+                    <div class="data3 specific-data">
+                        <div class="hero-price">₹ 26,56,110</div>
+                    </div>
+
+                    <div class="data4 data">
+                        <div class="percentage">2.73 %</div>
+                        <div class="timeline">1 DAY</div>
+                    </div>
+                    <div class="data5 data">
+                        <div class="percentage">7.51 %</div>
+                        <div class="timeline">3 DAY</div>
+                    </div>
+
+                </div>
+                <div class="mid-data-extra">Average BTC/INR net price including commission</div>
+            </div>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Last Traded Price</th>
+                    <th>Buy/Sell Price</th>
+                    <th>Volume</th>
+                    <th>Base Unit</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each data}}
+                <tr>
+                    <td>{{this.index}}</td>
+                    <td>{{this.name}}</td>
+                    <td>₹ {{this.last}}</td>
+                    <td>₹ {{this.buy}} / ₹ {{this.sell}}</td>
+                    <td>{{this.volume}}</td>
+                    <td>{{this.base_unit}}</td>
+                </tr>
+                  {{/each}}
+            </tbody>
+        </table>
+        <hr class="end">
+        <footer>
+            <button>Add hodlinfo to home screen</button>
+        </footer>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
